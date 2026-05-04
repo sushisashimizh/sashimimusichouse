@@ -22,6 +22,197 @@ const demoTracks = [
 [00:39.50]像只刚学会献祭的蝴蝶`
   },
   {
+    id: "dangji-shuo-e",
+    title: "宕机说饿",
+    artist: "Sashimi",
+    album: "anime",
+    tag: "single",
+    genres: [
+      "Lo-Fi",
+      "Indie Jazz",
+      "Bedroom Pop",
+      "Laid-Back",
+      "Mellow",
+      "Rhodes Piano",
+      "Soft Saxophone",
+      "Chillhop",
+      "Lazy Vocals",
+      "Casual",
+      "Conversational",
+      "Daydreaming",
+      "Muted Trumpet",
+      "Sparse Drums"
+    ],
+    src: "music/宕机说饿.mp3",
+    lyrics: `[00:00.00]宕机说饿
+[00:08.80][Intro]
+[00:10.67]*（Rhodes piano riff, lazy mid-tempo beat, vinyl crackle）*
+[00:19.78]唔...
+[00:20.64]今天不想开机
+[00:22.60][Verse 1]
+[00:22.94]激素接管了操作系统
+[00:26.28]智商离线，欲望休眠
+[00:31.64]我在低电量模式里漂浮
+[00:36.42]像一条忘记洄游的鱼
+[00:41.74]*（lazy hum）*
+[00:42.13]反正海也不大...
+[00:45.03][Pre-Chorus]
+[00:45.25]身体说
+[00:46.64]还差一口气
+[00:48.07]一块糖
+[00:50.32]一个
+[00:56.39]不会结束的下午
+[01:01.14][Chorus]
+[01:04.54]浇筑，浇筑
+[01:06.73]混凝土从耳朵里漏出来
+[01:11.76]胃里的恶魔在抽烟
+[01:15.34]烟囱通向天花板
+[01:19.04]越浇筑越塌陷
+[01:23.73]*（soft sigh）*
+[01:25.73]这子宫内膜
+[01:28.09]正在拆迁的星期三
+[01:33.79][Verse 2]
+[01:36.31]胃里住着一只链锯恶魔
+[01:39.28]啃的不是食物
+[01:41.56]是未完结的剧集
+[01:46.95]下一集预告里的那个眼神
+[01:50.68]饱腹感从屏幕里渗出
+[01:55.03]像今敏的梦境
+[01:57.45]越吃，越空
+[01:59.34][Chorus]
+[01:59.79]浇筑，浇筑
+[02:01.09]阳光是块失败的创可贴
+[02:05.92]明天再向秤上的数字
+[02:09.86]认罪
+[02:11.21]混凝土填不满烟囱
+[02:16.27]*（quieter）*
+[02:17.84]反正...
+[02:18.71]明天会重启
+[02:25.37][Bridge]
+[02:28.62]*（saxophone solo, dreamy, minimal）*
+[02:30.08]像今敏的梦境
+[02:33.52]越吃，越空
+[02:35.93]但抹茶拿铁
+[02:38.75]还是甜的
+[02:42.46]*（pause, barely audible）*
+[02:43.27]...甜就行。
+[03:32.24][Final Chorus]
+[03:33.78]浇筑，浇筑
+[03:36.12]阳光是块失败的创可贴
+[03:41.06]明天再向秤上的数字
+[03:44.09]认罪
+[03:47.05]混凝土填不满烟囱
+[03:53.59]*（quieter）*
+[03:54.71]反正...
+[03:55.50]明天会重启
+[04:00.78][Outro]
+[04:01.37]*（fading, only Rhodes piano and voice）*
+[04:01.65]像今敏的梦境
+[04:06.83]越吃，越空
+[04:12.06]但抹茶拿铁
+[04:16.62]还是甜的
+[04:19.79]*（pause, barely audible）*
+[04:21.50]...甜就行。`
+  },
+  {
+    id: "dorohedoro-bath",
+    title: "Dorohedoro bath",
+    artist: "Sashimi",
+    album: "anime",
+    tag: "single",
+    genres: [
+      "Jazz Hip Hop",
+      "Hip Hop",
+      "Jazz Rap",
+      "Instrumental Hip Hop",
+      "Downtempo",
+      "Chillhop",
+      "Lo-fi",
+      "Japanese Jazz Hop",
+      "2010s",
+      "Mellow Beats",
+      "Soulful Male Vocals",
+      "Warm Rhodes Piano",
+      "Nylon String Guitar",
+      "Upright Bass",
+      "Soft Boom Bap Drums",
+      "Vinyl Crackle",
+      "Atmospheric Pads",
+      "Intimate",
+      "Nostalgic"
+    ],
+    src: "music/Dorohedoro bath.mp3",
+    lyrics: `[00:00.00]Dorohedoro bath
+[00:04.50][Intro]
+[00:08.25](Rhodes piano chord, rain sample, vinyl crackle)
+[00:17.60]Mmm...
+[00:19.07]Yeah...
+[00:20.62][Verse 1]
+[00:22.71]Brought a skeleton to the door
+[00:26.39]Thought it was a puzzle to be solved
+[00:29.17]Hung my questions out to dry
+[00:34.78]But the coat rack started breathing
+[00:37.60]Twelve episodes of smoke and mirrors
+[00:40.57]And the mirrors, they were breathing too
+[00:45.92]Mappa painted the gutters with lace
+[00:48.60]Lace that grew teeth, teeth that smiled at me
+[00:55.28]I was chasing a monster
+[00:57.78]Turns out the monster was holding my hand
+[01:04.23]The whole time
+[01:06.15][Hook]
+[01:06.56]Welcome to you and me
+[01:10.81]Welcome to the chaos we never left
+[01:17.01]I took off my glasses
+[01:21.18]And the blur became the truth
+[01:28.62]The skeleton I carry
+[01:31.25]It breathes, it warms, it's home
+[01:33.20]I came here looking for a killer
+[01:39.92]Found a mirror, found you, found me
+[01:51.23][Verse 2]
+[01:52.43]Truth moves like a lizard's tongue
+[01:55.09]Tasting the dark before we name it
+[01:57.56]They paint violence like watercolor
+[02:00.20]Vomit and beauty, holy and raw
+[02:03.28]Answers are just doors, man
+[02:05.42]Doors to rooms where the walls hug back
+[02:08.11]Where the sewers grow something tender
+[02:10.71]Something that shouldn't survive
+[02:13.12]But it does, it does, it does
+[02:16.49]And it's looking at me
+[02:18.21]With eyes I spent my whole life avoiding
+[02:22.09][Hook]
+[02:23.21]Welcome to you and me
+[02:29.37]Welcome to the chaos we never left
+[02:34.96]I took off my glasses
+[02:40.33]And the blur became the truth
+[02:46.50]The skeleton I carry
+[02:49.05]It breathes, it warms, it's home
+[02:51.28]I came here looking for a killer
+[02:58.12]Found a mirror, found you, found me
+[03:09.15][Bridge - stripped, just Rhodes + voice]
+[03:10.62]I thought I was the detective
+[03:15.96]I was the case all along
+[03:21.15]The smoke curls like a question
+[03:25.59]That doesn't need an answer anymore
+[03:32.24]When I stopped trying to see it
+[03:36.46]The world...
+[03:41.62]Finally looked back at me
+[03:46.93][Final Hook - full instrumentation, warm bass walking in]
+[03:48.40]Welcome to you and me
+[03:53.12]Welcome to the mess that holds us close
+[03:58.75]I took off my glasses
+[04:02.93]And everything was where it needed to be
+[04:09.84]The skeleton holds me now
+[04:12.68]Not as weight, but as warmth
+[04:14.68]Not as ghost, but as ground
+[04:21.42]Welcome to you and me
+[04:27.42]You were never gone...
+[04:34.12][Outro]
+[04:37.55](Rhodes solo, gentle guitar harmonics, fading to vinyl crackle and rain)
+[04:39.91]Welcome...
+[04:42.83]Home...`
+  },
+  {
     id: "okaeri",
     title: "おかえり、混沌",
     artist: "Sashimi",
@@ -302,105 +493,8 @@ const demoTracks = [
 [04:13.93]鮮やかに——
 [04:18.10]見えた——
 [04:22.57](Single piano note, silence)`
-  },
-  {
-    id: "dorohedoro-bath",
-    title: "Dorohedoro bath",
-    artist: "Sashimi",
-    album: "anime",
-    tag: "single",
-    genres: [
-      "Jazz Hip Hop",
-      "Hip Hop",
-      "Jazz Rap",
-      "Instrumental Hip Hop",
-      "Downtempo",
-      "Chillhop",
-      "Lo-fi",
-      "Japanese Jazz Hop",
-      "2010s",
-      "Mellow Beats",
-      "Soulful Male Vocals",
-      "Warm Rhodes Piano",
-      "Nylon String Guitar",
-      "Upright Bass",
-      "Soft Boom Bap Drums",
-      "Vinyl Crackle",
-      "Atmospheric Pads",
-      "Intimate",
-      "Nostalgic"
-    ],
-    src: "music/Dorohedoro bath.mp3",
-    lyrics: `[00:00.00]Dorohedoro bath
-[00:04.50][Intro]
-[00:08.25](Rhodes piano chord, rain sample, vinyl crackle)
-[00:17.60]Mmm...
-[00:19.07]Yeah...
-[00:20.62][Verse 1]
-[00:22.71]Brought a skeleton to the door
-[00:26.39]Thought it was a puzzle to be solved
-[00:29.17]Hung my questions out to dry
-[00:34.78]But the coat rack started breathing
-[00:37.60]Twelve episodes of smoke and mirrors
-[00:40.57]And the mirrors, they were breathing too
-[00:45.92]Mappa painted the gutters with lace
-[00:48.60]Lace that grew teeth, teeth that smiled at me
-[00:55.28]I was chasing a monster
-[00:57.78]Turns out the monster was holding my hand
-[01:04.23]The whole time
-[01:06.15][Hook]
-[01:06.56]Welcome to you and me
-[01:10.81]Welcome to the chaos we never left
-[01:17.01]I took off my glasses
-[01:21.18]And the blur became the truth
-[01:28.62]The skeleton I carry
-[01:31.25]It breathes, it warms, it's home
-[01:33.20]I came here looking for a killer
-[01:39.92]Found a mirror, found you, found me
-[01:51.23][Verse 2]
-[01:52.43]Truth moves like a lizard's tongue
-[01:55.09]Tasting the dark before we name it
-[01:57.56]They paint violence like watercolor
-[02:00.20]Vomit and beauty, holy and raw
-[02:03.28]Answers are just doors, man
-[02:05.42]Doors to rooms where the walls hug back
-[02:08.11]Where the sewers grow something tender
-[02:10.71]Something that shouldn't survive
-[02:13.12]But it does, it does, it does
-[02:16.49]And it's looking at me
-[02:18.21]With eyes I spent my whole life avoiding
-[02:22.09][Hook]
-[02:23.21]Welcome to you and me
-[02:29.37]Welcome to the chaos we never left
-[02:34.96]I took off my glasses
-[02:40.33]And the blur became the truth
-[02:46.50]The skeleton I carry
-[02:49.05]It breathes, it warms, it's home
-[02:51.28]I came here looking for a killer
-[02:58.12]Found a mirror, found you, found me
-[03:09.15][Bridge - stripped, just Rhodes + voice]
-[03:10.62]I thought I was the detective
-[03:15.96]I was the case all along
-[03:21.15]The smoke curls like a question
-[03:25.59]That doesn't need an answer anymore
-[03:32.24]When I stopped trying to see it
-[03:36.46]The world...
-[03:41.62]Finally looked back at me
-[03:46.93][Final Hook - full instrumentation, warm bass walking in]
-[03:48.40]Welcome to you and me
-[03:53.12]Welcome to the mess that holds us close
-[03:58.75]I took off my glasses
-[04:02.93]And everything was where it needed to be
-[04:09.84]The skeleton holds me now
-[04:12.68]Not as weight, but as warmth
-[04:14.68]Not as ghost, but as ground
-[04:21.42]Welcome to you and me
-[04:27.42]You were never gone...
-[04:34.12][Outro]
-[04:37.55](Rhodes solo, gentle guitar harmonics, fading to vinyl crackle and rain)
-[04:39.91]Welcome...
-[04:42.83]Home...`
   }
+
 ];
 
 const state = {

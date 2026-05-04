@@ -20,10 +20,11 @@
 当前已录入：
 
 - `弥海砂`
+- `宕机说饿`
+- `Dorohedoro bath`
 - `おかえり、混沌`
 - `Dorohedoro after-effect`
 - `おかえり、混沌 - male voice`
-- `Dorohedoro bath`
 
 ## 添加新歌
 
