@@ -450,6 +450,10 @@ const els = {
   playButton: document.querySelector("#playButton"),
   prevButton: document.querySelector("#prevButton"),
   nextButton: document.querySelector("#nextButton"),
+  queueButton: document.querySelector("#queueButton"),
+  queueOverlay: document.querySelector("#queueOverlay"),
+  queueCloseButton: document.querySelector("#queueCloseButton"),
+  queuePlaylist: document.querySelector("#queuePlaylist"),
   seekBar: document.querySelector("#seekBar"),
   muteButton: document.querySelector("#muteButton"),
   volumeBar: document.querySelector("#volumeBar"),
@@ -639,6 +643,43 @@ function renderPlaylist() {
   }
 }
 
+function renderQueuePlaylist() {
+  els.queuePlaylist.innerHTML = "";
+
+  state.tracks.forEach((track, index) => {
+    const item = document.createElement("li");
+    const button = document.createElement("button");
+    button.className = `track-row${index === state.currentIndex ? " active" : ""}`;
+    button.type = "button";
+    const textWrap = document.createElement("span");
+    const title = document.createElement("strong");
+    const detail = document.createElement("span");
+    const trackIndex = document.createElement("span");
+
+    title.textContent = track.title;
+    detail.textContent = `${track.artist} · ${(track.genres || [track.album])[0] || track.album}`;
+    trackIndex.className = "track-index";
+    trackIndex.textContent = String(index + 1).padStart(2, "0");
+    textWrap.append(title, detail);
+    button.append(textWrap, trackIndex);
+    button.addEventListener("click", () => {
+      selectTrack(index, true);
+      closeQueue();
+    });
+    item.appendChild(button);
+    els.queuePlaylist.appendChild(item);
+  });
+}
+
+function openQueue() {
+  renderQueuePlaylist();
+  els.queueOverlay.classList.remove("hidden");
+}
+
+function closeQueue() {
+  els.queueOverlay.classList.add("hidden");
+}
+
 function renderLyrics() {
   const current = state.tracks[state.currentIndex];
   state.lyricLines = parseLyrics(current?.lyrics || "");
@@ -677,6 +718,7 @@ function updateTrackMeta() {
   els.duration.textContent = "0:00";
   renderLyrics();
   renderPlaylist();
+  renderQueuePlaylist();
 }
 
 function tagLabel(tag) {
@@ -969,6 +1011,11 @@ els.playButton.addEventListener("click", () => {
 
 els.prevButton.addEventListener("click", () => selectTrack(state.currentIndex - 1, true));
 els.nextButton.addEventListener("click", () => selectTrack(state.currentIndex + 1, true));
+els.queueButton.addEventListener("click", openQueue);
+els.queueCloseButton.addEventListener("click", closeQueue);
+els.queueOverlay.addEventListener("click", (event) => {
+  if (event.target === els.queueOverlay) closeQueue();
+});
 
 els.seekBar.addEventListener("input", () => {
   const duration = els.audio.duration;
@@ -1037,6 +1084,10 @@ document.addEventListener("keydown", (event) => {
   }
   if (event.code === "Escape" && state.maker.open) {
     closeMaker();
+    return;
+  }
+  if (event.code === "Escape" && !els.queueOverlay.classList.contains("hidden")) {
+    closeQueue();
     return;
   }
   if (isTyping) return;

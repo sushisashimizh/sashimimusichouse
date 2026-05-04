@@ -20,6 +20,12 @@
           <input id="fileInput" class="hidden-input" type="file" accept="audio/*,.lrc" multiple />
         </div>
 
+        <p class="copyright-note">
+          <span>Copyright ©</span>
+          <strong>sushisashimizh@gmail.com</strong>
+          <span>All Rights Reserved</span>
+        </p>
+
         <label class="search-box">
           <span aria-hidden="true">⌕</span>
           <input id="searchInput" type="search" placeholder="搜索歌曲、专辑、标签" autocomplete="off" />
@@ -43,6 +49,11 @@
       </section>
 
       <section class="player-stage" aria-label="播放器">
+        <div class="player-brand">
+          <p class="eyebrow">Sashimi Music House</p>
+          <p>刺身黑胶碟铺</p>
+        </div>
+
         <div class="stage-topbar">
           <div class="topbar-actions">
             <button class="ghost-button" id="lyricsToggle" type="button" aria-pressed="true">
@@ -88,6 +99,10 @@
           <button class="play-button" id="playButton" type="button" title="播放/暂停" aria-label="播放/暂停">▶</button>
           <button class="icon-button" id="nextButton" type="button" title="下一首" aria-label="下一首">›</button>
         </div>
+
+        <button class="icon-button queue-button" id="queueButton" type="button" title="打开歌单" aria-label="打开歌单">
+          <span aria-hidden="true">≡</span>
+        </button>
 
         <div class="volume-control">
           <button class="icon-button volume-button" id="muteButton" type="button" title="音量" aria-label="音量">
@@ -161,6 +176,19 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="queue-overlay hidden" id="queueOverlay" aria-label="移动歌单">
+      <div class="queue-panel">
+        <div class="queue-head">
+          <div>
+            <p class="eyebrow">PLAYLIST</p>
+            <h2>选择播放</h2>
+          </div>
+          <button class="icon-button" id="queueCloseButton" type="button" title="关闭歌单" aria-label="关闭歌单">×</button>
+        </div>
+        <ol class="playlist queue-playlist" id="queuePlaylist"></ol>
       </div>
     </section>
 
