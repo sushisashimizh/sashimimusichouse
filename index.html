@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sashimi Music House</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="library-panel" aria-label="歌单">
+        <div class="brand-row">
+          <div>
+            <p class="eyebrow">Sashimi Music House</p>
+            <h1>刺身黑胶碟铺</h1>
+          </div>
+          <button class="icon-button" id="importButton" type="button" title="导入音乐" aria-label="导入音乐">
+            <span aria-hidden="true">＋</span>
+          </button>
+          <input id="fileInput" class="hidden-input" type="file" accept="audio/*,.lrc" multiple />
+        </div>
+
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="搜索歌曲、专辑、标签" autocomplete="off" />
+        </label>
+
+        <div class="filter-tabs" role="tablist" aria-label="歌单分类">
+          <button class="tab-button active" type="button" data-filter="all">全部</button>
+          <button class="tab-button" type="button" data-filter="pop">Pop</button>
+          <button class="tab-button" type="button" data-filter="jpop">J-pop</button>
+          <button class="tab-button" type="button" data-filter="rock">Rock</button>
+          <button class="tab-button" type="button" data-filter="hiphop">Hip Hop</button>
+          <button class="tab-button" type="button" data-filter="chilljazz">Chill Jazz</button>
+          <button class="tab-button" type="button" data-filter="cinematic">Cinematic</button>
+        </div>
+
+        <div class="playlist-header">
+          <span>歌单</span>
+          <span id="songCount">0 首</span>
+        </div>
+        <ol class="playlist" id="playlist"></ol>
+      </section>
+
+      <section class="player-stage" aria-label="播放器">
+        <div class="stage-topbar">
+          <div class="topbar-actions">
+            <button class="ghost-button" id="lyricsToggle" type="button" aria-pressed="true">
+              <span aria-hidden="true">☰</span>
+              <span>歌词</span>
+            </button>
+            <button class="ghost-button admin-only" id="lrcMakerButton" type="button">
+              <span aria-hidden="true">◎</span>
+              <span>LRC</span>
+            </button>
+          </div>
+          <div class="now-tag" id="nowTag">原创音乐</div>
+        </div>
+
+        <div class="turntable-wrap">
+          <div class="tonearm" id="tonearm" aria-hidden="true">
+            <div class="tonearm-base"></div>
+            <div class="tonearm-stick"></div>
+            <div class="tonearm-head"></div>
+          </div>
+          <div class="record" id="record" aria-hidden="true">
+            <div class="record-ring"></div>
+            <div class="record-label">
+              <span id="recordInitial">M</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="track-meta">
+          <p id="artistName">Artist</p>
+          <h2 id="trackTitle">选择一首歌</h2>
+          <p id="albumName">Album</p>
+        </div>
+
+        <div class="progress-area">
+          <span id="currentTime">0:00</span>
+          <input id="seekBar" type="range" min="0" max="1000" value="0" aria-label="播放进度" />
+          <span id="duration">0:00</span>
+        </div>
+
+        <div class="controls">
+          <button class="icon-button" id="prevButton" type="button" title="上一首" aria-label="上一首">‹</button>
+          <button class="play-button" id="playButton" type="button" title="播放/暂停" aria-label="播放/暂停">▶</button>
+          <button class="icon-button" id="nextButton" type="button" title="下一首" aria-label="下一首">›</button>
+        </div>
+
+        <div class="volume-control">
+          <button class="icon-button volume-button" id="muteButton" type="button" title="音量" aria-label="音量">
+            <svg class="volume-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path class="speaker-shape" d="M4 9.5h4l5-4v13l-5-4H4z"></path>
+              <path class="sound-wave wave-one" d="M16 9c1 1 1 5 0 6"></path>
+              <path class="sound-wave wave-two" d="M18.5 6.5c2.2 2.8 2.2 8.2 0 11"></path>
+              <path class="muted-cross" d="M17 9l4 6m0-6-4 6"></path>
+            </svg>
+          </button>
+          <div class="volume-popover" aria-label="音量控制">
+            <span id="volumeValue">80%</span>
+            <input id="volumeBar" type="range" min="0" max="100" value="80" aria-label="音量" orient="vertical" />
+          </div>
+        </div>
+      </section>
+
+      <aside class="lyrics-panel" id="lyricsPanel" aria-label="歌词">
+        <div class="lyrics-title">
+          <p>LYRICS</p>
+          <h2 id="lyricsSongTitle">歌词</h2>
+        </div>
+        <div class="lyrics-list" id="lyricsList"></div>
+      </aside>
+    </main>
+
+    <section class="maker-overlay hidden" id="makerOverlay" aria-label="LRC 制作器">
+      <div class="maker-panel">
+        <div class="maker-head">
+          <div>
+            <p class="eyebrow">LRC MAKER</p>
+            <h2 id="makerTrackTitle">制作歌词</h2>
+          </div>
+          <button class="icon-button" id="makerCloseButton" type="button" title="关闭" aria-label="关闭">×</button>
+        </div>
+
+        <div class="maker-grid">
+          <div class="maker-editor">
+            <label for="rawLyrics">歌词打轴稿</label>
+            <textarea id="rawLyrics" spellcheck="false" placeholder="可粘贴纯歌词或 LRC；有 [00:00.00] 的行表示已打轴"></textarea>
+          </div>
+
+          <div class="maker-timing">
+            <div class="maker-clock">
+              <span id="makerTime">0:00.00</span>
+              <span id="makerLineCount">0 / 0</span>
+            </div>
+            <div class="maker-current-line" id="makerCurrentLine">等待歌词</div>
+            <div class="maker-seek">
+              <span id="makerSeekCurrent">0:00</span>
+              <input id="makerSeekBar" type="range" min="0" max="1000" value="0" aria-label="LRC 制作器时间轴" />
+              <span id="makerSeekDuration">0:00</span>
+            </div>
+            <div class="maker-actions">
+              <button class="ghost-button" id="makerBackButton" type="button">-5s</button>
+              <button class="primary-action" id="markLineButton" type="button">打点</button>
+              <button class="ghost-button" id="makerForwardButton" type="button">+5s</button>
+              <button class="ghost-button" id="undoMarkButton" type="button">撤销</button>
+              <button class="ghost-button" id="retimeLineButton" type="button">重打当前句</button>
+              <button class="ghost-button" id="loadCurrentLyricsButton" type="button">载入</button>
+              <button class="ghost-button" id="clearMakerButton" type="button">清空</button>
+            </div>
+            <div class="maker-output-wrap">
+              <label for="lrcOutput">LRC 预览</label>
+              <textarea id="lrcOutput" spellcheck="false" readonly></textarea>
+            </div>
+            <div class="maker-actions">
+              <button class="ghost-button" id="copyLrcButton" type="button">复制</button>
+              <button class="ghost-button" id="downloadLrcButton" type="button">下载</button>
+              <button class="primary-action" id="applyLrcButton" type="button">应用到当前歌曲</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <audio id="audio" preload="metadata"></audio>
+    <script src="./app.js"></script>
+  </body>
+</html>
