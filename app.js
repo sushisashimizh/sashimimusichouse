@@ -561,6 +561,12 @@ const els = {
   artistName: document.querySelector("#artistName"),
   albumName: document.querySelector("#albumName"),
   nowTag: document.querySelector("#nowTag"),
+  releasePill: document.querySelector("#releasePill"),
+  releasePillToggle: document.querySelector("#releasePillToggle"),
+  releaseCard: document.querySelector("#releaseCard"),
+  releaseCloseButton: document.querySelector("#releaseCloseButton"),
+  releasePlayButton: document.querySelector("#releasePlayButton"),
+  recipePlayButtons: document.querySelectorAll(".recipe-play"),
   lyricsToggle: document.querySelector("#lyricsToggle"),
   lyricsPanel: document.querySelector("#lyricsPanel"),
   lyricsSongTitle: document.querySelector("#lyricsSongTitle"),
@@ -772,6 +778,30 @@ function openQueue() {
 
 function closeQueue() {
   els.queueOverlay.classList.add("hidden");
+}
+
+function setReleaseExpanded(isExpanded) {
+  els.releaseCard.classList.toggle("hidden", !isExpanded);
+  els.releasePillToggle.classList.toggle("hidden", isExpanded);
+  els.releasePillToggle.setAttribute("aria-expanded", String(isExpanded));
+}
+
+function closeReleasePill() {
+  setReleaseExpanded(false);
+}
+
+function playFeaturedRelease() {
+  const releaseIndex = state.tracks.findIndex((track) => track.id === "dangji-shuo-e");
+  if (releaseIndex < 0) return;
+  selectTrack(releaseIndex, true);
+  setReleaseExpanded(false);
+}
+
+function playTrackById(trackId) {
+  const index = state.tracks.findIndex((track) => track.id === trackId);
+  if (index < 0) return;
+  selectTrack(index, true);
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function renderLyrics() {
@@ -1110,6 +1140,12 @@ els.queueCloseButton.addEventListener("click", closeQueue);
 els.queueOverlay.addEventListener("click", (event) => {
   if (event.target === els.queueOverlay) closeQueue();
 });
+els.releasePillToggle.addEventListener("click", () => setReleaseExpanded(true));
+els.releaseCloseButton.addEventListener("click", closeReleasePill);
+els.releasePlayButton.addEventListener("click", playFeaturedRelease);
+els.recipePlayButtons.forEach((button) => {
+  button.addEventListener("click", () => playTrackById(button.dataset.trackId));
+});
 
 els.seekBar.addEventListener("input", () => {
   const duration = els.audio.duration;
@@ -1182,6 +1218,10 @@ document.addEventListener("keydown", (event) => {
   }
   if (event.code === "Escape" && !els.queueOverlay.classList.contains("hidden")) {
     closeQueue();
+    return;
+  }
+  if (event.code === "Escape" && !els.releaseCard.classList.contains("hidden")) {
+    setReleaseExpanded(false);
     return;
   }
   if (isTyping) return;

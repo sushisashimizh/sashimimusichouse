@@ -68,6 +68,23 @@
           <div class="now-tag" id="nowTag">原创音乐</div>
         </div>
 
+        <aside class="release-pill" id="releasePill" aria-label="今日上新">
+          <button class="release-pill-toggle" id="releasePillToggle" type="button" aria-expanded="false" aria-label="打开今日上新">
+            <span aria-hidden="true">🍣</span>
+            <small>New Recipe</small>
+          </button>
+          <div class="release-card hidden" id="releaseCard">
+            <button class="release-close" id="releaseCloseButton" type="button" aria-label="关闭今日上新">×</button>
+            <p class="eyebrow">Sashimi Music House</p>
+            <h2>今日上新：宕机说饿</h2>
+            <p>一首关于低电量、饥饿、激素和抹茶拿铁的懒散小歌。</p>
+            <button class="release-play" id="releasePlayButton" type="button">
+              <span aria-hidden="true">▶</span>
+              <span>播放这首</span>
+            </button>
+          </div>
+        </aside>
+
         <div class="turntable-wrap">
           <div class="tonearm" id="tonearm" aria-hidden="true">
             <div class="tonearm-base"></div>
@@ -128,6 +145,71 @@
         <div class="lyrics-list" id="lyricsList"></div>
       </aside>
     </main>
+
+    <section class="recipes-section" id="recipesSection" aria-label="创作手记">
+      <div class="recipes-inner">
+        <div class="recipes-heading">
+          <div class="recipes-title">
+            <p class="eyebrow">SASHIMI RECIPES</p>
+            <h2>刺身食谱メモ</h2>
+          </div>
+          <p>
+            A listening diary for low battery afternoons, strange anime aftertastes,
+            vinyl dust, hunger, smoke, and small private weather.
+          </p>
+        </div>
+
+        <div class="recipes-grid">
+          <article class="recipe-item">
+            <div class="recipe-copy">
+              <div class="recipe-suggestion">
+                <span>食用建议</span>
+                <p>恋爱脑的献祭</p>
+              </div>
+              <p class="recipe-kicker">DEATH NOTE / GAZE / SACRIFICE</p>
+              <p class="recipe-track">弥海砂</p>
+              <p>
+                一首写给凝视、献祭和名字的歌。她不是单纯被命运推动的人，
+                更像把自己切成光和影的少女。
+              </p>
+              <button class="recipe-play" type="button" data-track-id="misa">▶ PLAY</button>
+            </div>
+          </article>
+
+          <article class="recipe-item">
+            <div class="recipe-copy">
+              <div class="recipe-suggestion">
+                <span>食用建议</span>
+                <p>你好，大姨妈</p>
+              </div>
+              <p class="recipe-kicker">LO-FI / HUNGER / MATCHA</p>
+              <p class="recipe-track">宕机说饿</p>
+              <p>
+                低电量、激素、饥饿和抹茶拿铁。身体像一台懒得重启的机器，
+                但甜味仍然在系统日志里闪了一下。
+              </p>
+              <button class="recipe-play" type="button" data-track-id="dangji-shuo-e">▶ PLAY</button>
+            </div>
+          </article>
+
+          <article class="recipe-item">
+            <div class="recipe-copy">
+              <div class="recipe-suggestion">
+                <span>食用建议</span>
+                <p>血腥林田球之后，适合泡澡</p>
+              </div>
+              <p class="recipe-kicker">RHODES / RAIN / JAZZ HOP</p>
+              <p class="recipe-track">Dorohedoro bath</p>
+              <p>
+                像泡在雨声、Rhodes 和黑胶噪点里的浴室手记。混沌没有被解决，
+                它只是变得温热，像一具终于肯呼吸的骨架。
+              </p>
+              <button class="recipe-play" type="button" data-track-id="dorohedoro-bath">▶ PLAY</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section class="maker-overlay hidden" id="makerOverlay" aria-label="LRC 制作器">
       <div class="maker-panel">

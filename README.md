@@ -86,3 +86,7 @@ http://127.0.0.1:4173/index.html
 - `styles.css`
 - `app.js`
 - `music/`
+
+## 更新日志
+
+功能和内容迭代记录见 `CHANGELOG.md`。
