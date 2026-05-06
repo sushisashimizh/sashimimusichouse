@@ -25,6 +25,8 @@
 - `おかえり、混沌`
 - `Dorohedoro after-effect`
 - `おかえり、混沌 - male voice`
+- `The Vapor (女蒸客)`
+- `女蒸客 (The Vapor)`
 
 ## 添加新歌
 
@@ -63,6 +65,12 @@ index.html?visitor=1
 ```
 
 LRC 工具可以载入当前歌词、打点、撤销、重打当前句、复制、下载，并把歌词临时应用到当前页面。注意：这是纯静态网页，`应用到当前歌曲` 只会修改当前浏览器运行中的数据；要永久更新网站歌词，需要把最终 LRC 写回 `app.js`。
+
+## LRC 自动对齐辅助
+
+项目内置了一个本地辅助脚本：`tools/align_lrc_with_whisper.py`。
+
+它可以读取音频和正确歌词，用本地转写模型抓取人声时间点，生成一份新的 LRC 初稿。使用说明见 `tools/README.md`。
 
 ## 本地预览
 

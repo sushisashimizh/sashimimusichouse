@@ -425,10 +425,26 @@ body.admin-mode .admin-only {
 }
 
 .release-card h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
   margin: 0;
   padding-right: 30px;
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   line-height: 1.18;
+  white-space: nowrap;
+}
+
+.release-card h2 small {
+  flex: 0 0 auto;
+  color: var(--accent-2);
+  font-size: 0.72em;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.release-card h2 span {
+  min-width: 0;
 }
 
 .release-card p:not(.eyebrow) {
@@ -1115,7 +1131,9 @@ textarea:focus {
   position: relative;
   display: grid;
   gap: 12px;
+  align-content: center;
   width: 100%;
+  min-height: 148px;
   margin: 0 0 24px;
   padding: 16px 18px 18px 22px;
   border: 1px solid rgba(241, 255, 150, 0.24);
@@ -1176,6 +1194,16 @@ textarea:focus {
   font-weight: 900;
   line-height: 1.02;
   text-wrap: balance;
+}
+
+.recipe-suggestion-long p {
+  font-size: clamp(1.7rem, 2.55vw, 2.55rem);
+  line-height: 1.06;
+}
+
+.recipe-suggestion-medium p {
+  font-size: clamp(1.65rem, 2.25vw, 2.35rem);
+  line-height: 1.08;
 }
 
 .recipe-kicker {
@@ -1324,6 +1352,10 @@ textarea:focus {
     padding: 12px;
   }
 
+  .release-card h2 {
+    font-size: 0.9rem;
+  }
+
   .track-meta p {
     margin-bottom: 3px;
   }
@@ -1392,6 +1424,18 @@ textarea:focus {
 
   .recipe-copy {
     padding: 18px;
+  }
+
+  .recipe-suggestion {
+    min-height: 0;
+  }
+
+  .recipe-suggestion-long p {
+    font-size: clamp(2rem, 9vw, 2.9rem);
+  }
+
+  .recipe-suggestion-medium p {
+    font-size: clamp(1.9rem, 8vw, 2.75rem);
   }
 
   .recipe-play {

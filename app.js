@@ -22,6 +22,227 @@ const demoTracks = [
 [00:39.50]像只刚学会献祭的蝴蝶`
   },
   {
+    id: "the-vapor",
+    title: "The Vapor (女蒸客)",
+    artist: "Sashimi",
+    album: "office satire",
+    tag: "single",
+    genres: [
+      "Indie Pop",
+      "Lo-Fi Beats",
+      "Hip Hop",
+      "Upbeat",
+      "Dark Comedy",
+      "Mellow",
+      "Female Vocal",
+      "Rap",
+      "Catchy Hook",
+      "Sunny Melancholy",
+      "Bubblegum Trap",
+      "Office Vibe",
+      "Alt-Pop"
+    ],
+    src: "music/The Vapor (女蒸客).mp3",
+    lyrics: `[00:00.00][Intro]
+[00:00.00]The chair is empty
+[00:01.92]Nobody moved her
+[00:03.84]She just
+[00:04.46]Faded into a painting
+[00:10.50][Verse 1]
+[00:10.68]Her PowerPoint made it rain inside that meeting room
+[00:14.98]For three straight years — artificial rain
+[00:17.76]Turned us all into mutes
+[00:22.30]Every slide was someone else's zero-to-one
+[00:24.82]She copy-pasted it into her own invincible legend
+[00:27.60]Those buzzwords floated in the AC breeze
+[00:30.06]Like steam landing in our nodding eyes
+[00:31.98]Then — evaporated
+[00:33.00][Pre-Chorus]
+[00:33.16]She planted rumors in the break room
+[00:35.42]Grafted other people's blooming seasons into her weekly reports
+[00:39.24]Her KPI was a funhouse mirror
+[00:41.52]Whoever it reflected turned grotesque
+[00:43.54]But the her inside that mirror
+[00:48.06]Grew thinner and thinner
+[00:51.08]Thinner and thinner
+[00:53.25][Chorus]
+[00:53.52]She evaporated, evaporated
+[00:58.34]Like a bubble popped by sunlight
+[01:04.60]She evaporated, evaporated
+[01:09.50]Became a patch of gray-green mold between the chair cushions
+[01:15.88]The AC blew and she scattered
+[01:18.54]A cloud of expired spores
+[01:21.34]Spinning down the sewer grate
+[01:23.96]Into the pipe-darkness below
+[01:26.70]She finally
+[01:28.58]Found her fertilizer
+[01:40.50][Verse 2]
+[01:40.54]No one cried, no one asked
+[01:42.38]The printer still jammed with last week's performance review
+[01:46.02]Toner smeared like ruined mascara
+[01:48.34]The group chat went silent for three seconds
+[01:51.44]Then someone sent a bubble tea emoji
+[01:53.60]Then another, then another
+[01:57.60]Like nothing happened
+[02:00.38]Like something finally did
+[02:05.35][Chorus]
+[02:05.60]She evaporated, evaporated
+[02:11.60]Like a bubble popped by sunlight
+[02:16.60]She evaporated, evaporated
+[02:22.00]Became a patch of gray-green mold between the chair cushions
+[02:28.06]The AC blew and she scattered
+[02:31.10]A cloud of expired spores
+[02:33.98]Spinning down the sewer grate
+[02:36.64]Into the pipe-darkness below
+[02:39.10]She finally
+[02:41.18]Found her fertilizer
+[02:52.70][Bridge]
+[02:52.98]Thinning, thinning, thinning
+[02:55.22]Nobody moved her
+[02:57.00]She chose her own regression
+[02:58.54]From human to shadow
+[03:00.06]From shadow to ash
+[03:01.72]From ash to
+[03:02.86]Mycelium
+[03:04.08]In the pipe-darkness she keeps sprouting
+[03:07.10]A mushroom washed away
+[03:10.80]Or a speck of dust that
+[03:11.50]Finally
+[03:13.02]Found its
+[03:14.86]Fertilizer
+[03:20.00][Final Chorus]
+[03:20.24]She evaporated, evaporated
+[03:23.32]Not death — just demotion
+[03:25.90]From conference room queen
+[03:27.84]To sewer microorganism
+[03:30.58]Nature's cycle
+[03:32.28]Never asks for KPIs
+[03:34.86]She evaporated, evaporated
+[03:40.86]And we —
+[03:43.02]Can finally breathe
+[03:54.00][Outro]
+[03:54.12]The chair still sits empty
+[03:56.14]But sunlight pours in now
+[03:58.32]We pretend to work
+[03:59.46]No one mentions that three-year artificial rain
+[04:03.22]We just glance at that seat sometimes
+[04:07.02]Then smile
+[04:10.84]And go back to our bubble tea`
+  },
+  {
+    id: "nv-zheng-ke",
+    title: "女蒸客 (The Vapor)",
+    artist: "Sashimi",
+    album: "office satire",
+    tag: "single",
+    genres: [
+      "Pop",
+      "Hip Hop",
+      "Rock",
+      "R&B",
+      "Latin",
+      "Lo-Fi Beats",
+      "Indie",
+      "Trap",
+      "Indie Pop",
+      "Upbeat",
+      "Dark Comedy",
+      "Mellow",
+      "Female Vocal",
+      "Rap",
+      "Catchy Hook",
+      "Sunny Melancholy",
+      "Bubblegum Trap",
+      "Office Vibe"
+    ],
+    src: "music/女蒸客 (The Vapor).mp3",
+    lyrics: `[00:00.00][Intro]
+[00:01.50]椅子空了
+[00:03.04]没人搬她
+[00:05.44]她自己
+[00:07.04]慢慢淡成一幅画
+[00:09.60][Verse 1]
+[00:09.78]她的PPT在会议室下了一场雨
+[00:12.88]下了三年，人工降雨
+[00:15.10]把我们都淋成哑巴
+[00:16.72]每一页写着别人的从0到1
+[00:20.24]被她剪贴成自己的所向披靡
+[00:22.94]那些词在空调风里飘啊飘
+[00:25.56]像水蒸气落进我们点头的眼睛里
+[00:28.98]然后，蒸发
+[00:31.70][Pre-Chorus]
+[00:31.94]她擅长在茶水间播种
+[00:34.28]在周报里嫁接别人的花期
+[00:36.44]她的KPI是一面哈哈镜
+[00:38.76]照谁谁畸形
+[00:40.28]但镜子里的她
+[00:44.36]越来越淡
+[00:46.90]越来越淡
+[00:50.80][Chorus]
+[00:51.26]她蒸发了，蒸发了
+[00:54.42]像被阳光戳破的气泡
+[00:57.58]她蒸发了，蒸发了
+[01:01.30]变成椅子缝里一蓬灰绿色的霉
+[01:05.52]空调一吹她就散了
+[01:08.74]一团过期的孢子
+[01:12.86]旋转着滑进下水道的格栅
+[01:17.40]她终于
+[01:21.56]找到了肥料
+[01:26.50][Verse 2]
+[01:26.78]没人哭，没人问
+[01:28.26]打印机里还卡着她上周的述职报告
+[01:30.36]墨粉晕开像哭花了的妆
+[01:31.56]群聊安静了三秒
+[01:33.60]然后有人发了杯奶茶的表情
+[01:35.72]接着是第二个，第三个
+[01:37.34]像什么都没发生
+[01:39.10]像终于发生了点什么
+[01:47.20][Chorus]
+[01:47.52]她蒸发了，蒸发了
+[01:50.42]像被阳光戳破的气泡
+[01:53.50]她蒸发了，蒸发了
+[01:57.34]变成椅子缝里一蓬灰绿色的霉
+[02:01.48]空调一吹她就散了
+[02:05.00]一团过期的孢子
+[02:08.74]旋转着滑进下水道的格栅
+[02:13.44]她终于
+[02:17.12]找到了肥料
+[02:23.50][Bridge]
+[02:23.72]变薄，变薄，变薄
+[02:27.38]不是谁搬的
+[02:27.98]是她自己选择的退化
+[02:29.60]从人到影子
+[02:31.14]从影子到灰
+[02:32.22]从灰到
+[02:33.56]菌丝
+[02:34.68]在管道的黑暗里
+[02:36.90]她继续发芽
+[02:38.04]一颗被冲走的蘑菇
+[02:40.30]或者一粒
+[02:42.12]终于
+[02:44.30]找到肥料的
+[02:47.06]灰尘
+[02:48.20][Final Chorus]
+[02:48.58]她蒸发了，蒸发了
+[02:53.16]不是死亡，是降级
+[02:56.68]从会议室女王
+[02:59.10]到下水道微生物
+[03:00.34]大自然的循环
+[03:02.76]从来不问KPI
+[03:05.38]她蒸发了，蒸发了
+[03:09.66]而我们
+[03:10.50]终于能呼吸
+[03:14.70][Outro]
+[03:14.92]椅子还空着
+[03:17.40]但阳光照进来了
+[03:20.90]我们假装工作
+[03:22.96]没人提起那场
+[03:24.06]下了三年的人工降雨
+[03:26.10]只是偶尔看向那个位置
+[03:29.66]然后笑一下
+[03:31.76]继续喝我们的奶茶`
+  },
+  {
     id: "dangji-shuo-e",
     title: "宕机说饿",
     artist: "Sashimi",
@@ -495,6 +716,7 @@ const demoTracks = [
 [04:22.57](Single piano note, silence)`
   }
 
+
 ];
 
 const state = {
@@ -791,7 +1013,7 @@ function closeReleasePill() {
 }
 
 function playFeaturedRelease() {
-  const releaseIndex = state.tracks.findIndex((track) => track.id === "dangji-shuo-e");
+  const releaseIndex = state.tracks.findIndex((track) => track.id === "the-vapor");
   if (releaseIndex < 0) return;
   selectTrack(releaseIndex, true);
   setReleaseExpanded(false);
