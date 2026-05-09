@@ -726,6 +726,7 @@ const state = {
   query: "",
   lyricsVisible: true,
   lyricLines: [],
+  shuffle: localStorage.getItem("musicPlayerShuffle") === "1",
   volume: Number(localStorage.getItem("musicPlayerVolume") || 0.8),
   lastVolume: Number(localStorage.getItem("musicPlayerLastVolume") || 0.8),
   maker: {
@@ -766,6 +767,7 @@ const els = {
   playButton: document.querySelector("#playButton"),
   prevButton: document.querySelector("#prevButton"),
   nextButton: document.querySelector("#nextButton"),
+  shuffleButton: document.querySelector("#shuffleButton"),
   queueButton: document.querySelector("#queueButton"),
   queueOverlay: document.querySelector("#queueOverlay"),
   queueCloseButton: document.querySelector("#queueCloseButton"),
@@ -1081,6 +1083,32 @@ function selectTrack(index, shouldPlay = false) {
   if (shouldPlay) playCurrent();
 }
 
+function getRandomTrackIndex() {
+  if (state.tracks.length <= 1) return state.currentIndex;
+  let nextIndex = state.currentIndex;
+  while (nextIndex === state.currentIndex) {
+    nextIndex = Math.floor(Math.random() * state.tracks.length);
+  }
+  return nextIndex;
+}
+
+function selectNextTrack(shouldPlay = false) {
+  selectTrack(state.shuffle ? getRandomTrackIndex() : state.currentIndex + 1, shouldPlay);
+}
+
+function toggleShuffle() {
+  state.shuffle = !state.shuffle;
+  localStorage.setItem("musicPlayerShuffle", state.shuffle ? "1" : "0");
+  updateShuffleButton();
+  showToast(state.shuffle ? "随机播放已开启" : "随机播放已关闭");
+}
+
+function updateShuffleButton() {
+  els.shuffleButton.setAttribute("aria-pressed", String(state.shuffle));
+  els.shuffleButton.title = state.shuffle ? "关闭随机播放" : "随机播放";
+  els.shuffleButton.setAttribute("aria-label", state.shuffle ? "关闭随机播放" : "随机播放");
+}
+
 async function playCurrent() {
   try {
     await els.audio.play();
@@ -1356,7 +1384,8 @@ els.playButton.addEventListener("click", () => {
 });
 
 els.prevButton.addEventListener("click", () => selectTrack(state.currentIndex - 1, true));
-els.nextButton.addEventListener("click", () => selectTrack(state.currentIndex + 1, true));
+els.nextButton.addEventListener("click", () => selectNextTrack(true));
+els.shuffleButton.addEventListener("click", toggleShuffle);
 els.queueButton.addEventListener("click", openQueue);
 els.queueCloseButton.addEventListener("click", closeQueue);
 els.queueOverlay.addEventListener("click", (event) => {
@@ -1423,7 +1452,7 @@ els.applyLrcButton.addEventListener("click", applyMakerLrc);
 
 els.audio.addEventListener("play", updatePlayingState);
 els.audio.addEventListener("pause", updatePlayingState);
-els.audio.addEventListener("ended", () => selectTrack(state.currentIndex + 1, true));
+els.audio.addEventListener("ended", () => selectNextTrack(true));
 els.audio.addEventListener("timeupdate", updateProgress);
 els.audio.addEventListener("loadedmetadata", updateProgress);
 
@@ -1456,4 +1485,5 @@ document.addEventListener("keydown", (event) => {
 });
 
 applyVolume(state.volume, false);
+updateShuffleButton();
 updateTrackMeta();

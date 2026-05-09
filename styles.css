@@ -678,6 +678,34 @@ input[type="range"] {
   backdrop-filter: blur(12px);
 }
 
+.shuffle-button {
+  position: absolute;
+  top: 43%;
+  right: 22px;
+  z-index: 4;
+  width: 34px;
+  height: 34px;
+  border-color: transparent;
+  background: rgba(25, 25, 25, 0.42);
+  color: var(--muted);
+  font-size: 0.92rem;
+  transform: none;
+  backdrop-filter: blur(12px);
+}
+
+.shuffle-button[aria-pressed="true"] {
+  border-color: rgba(139, 92, 246, 0.42);
+  background: rgba(139, 92, 246, 0.24);
+  color: var(--accent-2);
+  box-shadow: 0 10px 28px rgba(139, 92, 246, 0.18);
+}
+
+.shuffle-button:hover,
+.shuffle-button:active,
+.shuffle-button:focus-visible {
+  transform: none;
+}
+
 .volume-button {
   width: 36px;
   height: 36px;
@@ -1377,6 +1405,14 @@ textarea:focus {
   .queue-button {
     left: 8px;
     bottom: 12px;
+  }
+
+  .shuffle-button {
+    top: auto;
+    right: 8px;
+    bottom: 58px;
+    width: 34px;
+    height: 34px;
   }
 
   .filter-tabs {
